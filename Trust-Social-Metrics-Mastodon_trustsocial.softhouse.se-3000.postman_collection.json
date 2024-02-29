@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "4a37ed28-ea4c-4b75-be70-452b7b60a27d",
+		"name": "Trust-Social-Mastodon trustsocial.softhouse.se:3000",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9395793"
+	},
+	"item": [
+		{
+			"name": "Account (and User) Import",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/account_import?username=brodertuck&email=broder@prisagud.se&password=harkommerskatteaterbaringen",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"account_import"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "brodertuck"
+						},
+						{
+							"key": "email",
+							"value": "broder@prisagud.se"
+						},
+						{
+							"key": "password",
+							"value": "harkommerskatteaterbaringen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status Import",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status_imports\": [\r\n        {\r\n            \"language\": \"en\",\r\n            \"sensitive\": false,\r\n            \"spoiler_text\": \"\",\r\n            \"status\": \"Create status 1\",\r\n            \"visibility\": \"public\",\r\n            \"account_id\": 111568269776274638,\r\n            \"fact_checked\": true\r\n        },\r\n        {\r\n            \"language\": \"en\",\r\n            \"sensitive\": false,\r\n            \"spoiler_text\": \"\",\r\n            \"status\": \"Create status 2\",\r\n            \"visibility\": \"public\",\r\n            \"account_id\": 111568269776274638,\r\n            \"fact_checked\": false\r\n        },\r\n        {\r\n            \"language\": \"en\",\r\n            \"sensitive\": false,\r\n            \"spoiler_text\": \"\",\r\n            \"status\": \"Create status 3\",\r\n            \"visibility\": \"public\",\r\n            \"account_id\": 111568269776274638,\r\n            \"fact_checked\": false\r\n        },\r\n        {\r\n            \"language\": \"en\",\r\n            \"sensitive\": false,\r\n            \"spoiler_text\": \"\",\r\n            \"status\": \"Create status 4\",\r\n            \"visibility\": \"public\",\r\n            \"account_id\": 111568269776274638,\r\n            \"fact_checked\": false\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/status_import",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"status_import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status Import Localhost",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status_imports\": [\r\n        {\r\n            \"language\": \"en\",\r\n            \"sensitive\": false,\r\n            \"spoiler_text\": \"\",\r\n            \"status\": \"Create status 1\",\r\n            \"visibility\": \"public\",\r\n            \"account_id\": 111568269776274638,\r\n            \"fact_checked\": true\r\n        },\r\n        {\r\n            \"language\": \"en\",\r\n            \"sensitive\": false,\r\n            \"spoiler_text\": \"\",\r\n            \"status\": \"Create status 2\",\r\n            \"visibility\": \"public\",\r\n            \"account_id\": 111568269776274638,\r\n            \"fact_checked\": false\r\n        },\r\n        {\r\n            \"language\": \"en\",\r\n            \"sensitive\": false,\r\n            \"spoiler_text\": \"\",\r\n            \"status\": \"Create status 3\",\r\n            \"visibility\": \"public\",\r\n            \"account_id\": 111568269776274638,\r\n            \"fact_checked\": false\r\n        },\r\n        {\r\n            \"language\": \"en\",\r\n            \"sensitive\": false,\r\n            \"spoiler_text\": \"\",\r\n            \"status\": \"Create status 4\",\r\n            \"visibility\": \"public\",\r\n            \"account_id\": 111568269776274638,\r\n            \"fact_checked\": false\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/status_import",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"status_import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reactions Import",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"reactions_import\": [\n        {\n            \"status_id\": 111568271359931210,\n            \"account_id\": 111568269776274638,\n            \"reaction\": \"LIKE\"\n        },\n        {\n            \"status_id\": 111568271362138931,\n            \"account_id\": 111568269776274638,\n            \"reaction\": \"DISLIKE\"\n        },\n        {\n            \"status_id\": 111568271363221436,\n            \"account_id\": 111568269776274638,\n            \"reaction\": \"TRUST\"\n        },\n        {\n            \"status_id\": 111568271364384289,\n            \"account_id\": 111568269776274638,\n            \"reaction\": \"DISTRUST\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/reactions_import",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"reactions_import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/accounts_delete",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"accounts_delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statuses Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/statuses_delete",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"statuses_delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reactions Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/reactions_delete/LIKE",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"reactions_delete",
+						"LIKE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export likes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/likes",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"likes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export dislikes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/dislikes",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"dislikes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export trusts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/trusts",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"trusts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export distrusts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/distrusts",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"distrusts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export statuses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/exported_statuses",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"exported_statuses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/exported_accounts",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"exported_accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verified statuses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/status_verification",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"status_verification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verified statues",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"verified_statuses\": [\n        {\n            \"id\": \"111601299305621055\",\n            \"fact_checked\": false,\n            \"debunked\": false\n        },\n        {\n            \"id\": \"111601299303749597\",\n            \"fact_checked\": false,\n            \"debunked\": false\n        },\n        {\n            \"id\": \"111601299301965470\",\n            \"fact_checked\": false,\n            \"debunked\": false\n        },\n        {\n            \"id\": \"111601299295994618\",\n            \"fact_checked\": false,\n            \"debunked\": false\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/status_verification",
+					"protocol": "http",
+					"host": [
+						"trustsocial",
+						"softhouse",
+						"se"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"status_verification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate metrics",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://trustsocial.softhouse.se:3000/api/v1/metrics_calculation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"metrics_calculation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
